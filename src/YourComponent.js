@@ -1,7 +1,8 @@
 
 import React, { useState, useEffect } from "react";
 
-const YourComponent = () => {
+
+export default YourComponent = () => {
   const [input1Value, setInput1Value] = useState("");
   const [input2Value, setInput2Value] = useState("");
 
@@ -43,4 +44,3 @@ const YourComponent = () => {
     </div>
   );
 };
-export default YourComponent;
