@@ -2,7 +2,7 @@
 import React from "react";
 //  { useState, useEffect }
 
-export default YourComponent = () => {
+const YourComponent = () => {
   // const [input1Value, setInput1Value] = useState("");
   // const [input2Value, setInput2Value] = useState("");
 
@@ -44,3 +44,5 @@ export default YourComponent = () => {
     </div>
   );
 };
+
+export default YourComponent;

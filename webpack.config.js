@@ -1,4 +1,7 @@
+const path = require('path');
+
 module.exports = {
+  entry: path.resolve('src', 'index.js'),
   module: {
     rules: [
       {
@@ -13,7 +16,20 @@ module.exports = {
       },
     ],
   },
+  externals: [
+    {
+      react: {
+        root: 'React',
+        amd: 'react',
+        commonjs: 'react',
+        commonjs2: 'react',
+      },
+    },
+  ],
   output: {
-    // globalObject: 'this',
+    path: path.resolve('dist'),
+    filename: 'main.js',
+    libraryTarget: 'umd',
+    globalObject: 'this',
   },
 };
