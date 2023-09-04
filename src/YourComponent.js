@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
-
 import styles from "./styles.module.css";
 
 const YourComponent = (inputData1, inputData2, outputData) => {
   const [input1Value, setInput1Value] = useState("");
   const [input2Value, setInput2Value] = useState("");
-  const location = useLocation();
 
   useEffect(() => {
     // Load saved values from localStorage when the component mounts
