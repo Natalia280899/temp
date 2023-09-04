@@ -1,6 +1,6 @@
 {
   "name": "shared-react-component",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Shared React component for use in other projects",
   "main": "dist/main.js",
   "scripts": {
@@ -20,8 +20,8 @@
   "author": "Your Name",
   "license": "MIT",
   "peerDependencies": {
-    "react": ">=15.0.0",
-    "react-dom": ">=15.0.0"
+    "react": "15.0.0",
+    "react-dom": "15.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.22.11",
@@ -29,8 +29,8 @@
     "@babel/preset-react": "^7.22.5",
     "babel-loader": "^8.3.0",
     "jest": "^27.5.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "react": "^15.0.0",
+    "react-dom": "^15.0.0",
     "webpack": "^5.88.2",
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.15.1"
