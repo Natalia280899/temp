@@ -2,8 +2,8 @@
 import React, { useState, useEffect } from "react";
 
 const YourComponent = () => {
-  const [input1Value, setInput1Value] = useState<string>("");
-  const [input2Value, setInput2Value] = useState<string>("");
+  const [input1Value, setInput1Value] = useState("");
+  const [input2Value, setInput2Value] = useState("");
 
   useEffect(() => {
     // Load saved values from localStorage when the component mounts
