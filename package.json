@@ -1,6 +1,6 @@
 {
   "name": "shared-react-component",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Shared React component for use in other projects",
   "main": "dist/main.js",
   "scripts": {

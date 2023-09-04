@@ -1,6 +1,6 @@
 
-import React, { useState, useEffect } from "react";
-
+import React from "react";
+//  { useState, useEffect }
 
 export default YourComponent = () => {
   // const [input1Value, setInput1Value] = useState("");
