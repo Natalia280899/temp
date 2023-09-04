@@ -9,7 +9,7 @@ const YourComponent = (inputData1, inputData2, outputData) => {
     // Load saved values from localStorage when the component mounts
     const savedInput1Value = localStorage.getItem("TEST:input1Value");
     const savedInput2Value = localStorage.getItem("TEST:input2Value");
-
+    console.log(inputData1, inputData2, outputData);
     if (!inputData1) {
       if (savedInput1Value) setInput1Value(savedInput1Value);
     } else {
@@ -54,7 +54,7 @@ const YourComponent = (inputData1, inputData2, outputData) => {
 
       <button
         className={styles.button}
-        onClick={() => outputData({ input1Value, input2Value })}
+        onClick={() => outputData && outputData({ input1Value, input2Value })}
       >
         OUTPUT!
       </button>
