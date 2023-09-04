@@ -1,17 +1,29 @@
+import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
-import React,{ useState, useEffect } from "react";
+import styles from "./styles.module.css";
 
-const YourComponent = () => {
+const YourComponent = (inputData1, inputData2, outputData) => {
   const [input1Value, setInput1Value] = useState("");
   const [input2Value, setInput2Value] = useState("");
+  const location = useLocation();
 
   useEffect(() => {
     // Load saved values from localStorage when the component mounts
-    const savedInput1Value = localStorage.getItem("input1Value");
-    const savedInput2Value = localStorage.getItem("input2Value");
+    const savedInput1Value = localStorage.getItem("TEST:input1Value");
+    const savedInput2Value = localStorage.getItem("TEST:input2Value");
 
-    if (savedInput1Value) setInput1Value(savedInput1Value);
-    if (savedInput2Value) setInput2Value(savedInput2Value);
+    if (!inputData1) {
+      if (savedInput1Value) setInput1Value(savedInput1Value);
+    } else {
+      setInput1Value(inputData1);
+    }
+
+    if (!inputData1) {
+      if (savedInput2Value) setInput2Value(savedInput2Value);
+    } else {
+      setInput2Value(inputData2);
+    }
   }, []);
 
   const handleInputChange1 = (event) => {
@@ -27,19 +39,28 @@ const YourComponent = () => {
   };
 
   return (
-    <div>
+    <div className={styles.container}>
       <input
         type="text"
         value={input1Value}
         onChange={handleInputChange1}
         placeholder="Input 1"
+        className={styles.input}
       />
       <input
         type="text"
         value={input2Value}
         onChange={handleInputChange2}
         placeholder="Input 2"
+        className={styles.input}
       />
+
+      <button
+        className={styles.button}
+        onClick={() => outputData({ input1Value, input2Value })}
+      >
+        OUTPUT!
+      </button>
     </div>
   );
 };
