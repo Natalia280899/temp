@@ -1,22 +1,38 @@
 {
-  "name": "bet-slip",
-  "version": "0.1.0",
-  "private": true,
+  "name": "shared-react-component",
+  "version": "1.0.0",
+  "description": "Shared React component for use in other projects",
+  "main": "dist/index.js",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server --mode development",
+    "test": "jest"
   },
-  "dependencies": {
-    "@types/node": "20.5.0",
-    "@types/react": "18.2.20",
-    "@types/react-dom": "18.2.7",
-    "eslint": "8.47.0",
-    "eslint-config-next": "13.4.16",
-    "next": "13.4.16",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "typescript": "5.1.6"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/shared-react-component.git"
+  },
+  "keywords": [
+    "react",
+    "shared",
+    "component"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": ">=15.0.0",
+    "react-dom": ">=15.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.11",
+    "@babel/preset-env": "^7.22.14",
+    "@babel/preset-react": "^7.22.5",
+    "babel-loader": "^8.3.0",
+    "jest": "^27.5.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.15.1"
   }
 }

@@ -1,9 +1,7 @@
-"use client";
 
 import React, { useState, useEffect } from "react";
-import styles from "./page.module.css";
 
-const Home = () => {
+export default YourComponent = () => {
   const [input1Value, setInput1Value] = useState<string>("");
   const [input2Value, setInput2Value] = useState<string>("");
 
@@ -16,13 +14,13 @@ const Home = () => {
     if (savedInput2Value) setInput2Value(savedInput2Value);
   }, []);
 
-  const handleInputChange1 = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange1 = (event) => {
     const newValue = event.target.value;
     setInput1Value(newValue);
     localStorage.setItem("TEST:input1Value", newValue);
   };
 
-  const handleInputChange2 = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange2 = (event) => {
     const newValue = event.target.value;
     setInput2Value(newValue);
     localStorage.setItem("TEST:input2Value", newValue);
@@ -31,14 +29,12 @@ const Home = () => {
   return (
     <div>
       <input
-        className={styles.input}
         type="text"
         value={input1Value}
         onChange={handleInputChange1}
         placeholder="Input 1"
       />
       <input
-        className={styles.input}
         type="text"
         value={input2Value}
         onChange={handleInputChange2}
@@ -47,5 +43,3 @@ const Home = () => {
     </div>
   );
 };
-
-export default Home;
