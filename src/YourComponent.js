@@ -54,7 +54,7 @@ const YourComponent = (inputData1, inputData2, outputData) => {
 
       <button
         className={styles.button}
-        onClick={() => outputData && outputData({ input1Value, input2Value })}
+        onClick={() => outputData({ input1Value, input2Value })}
       >
         OUTPUT!
       </button>
