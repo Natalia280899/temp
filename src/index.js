@@ -1,3 +1,3 @@
-import YourComponent from './YourComponent';
+import YourComponent from './YourComponent.jsx';
 
 export default YourComponent;
