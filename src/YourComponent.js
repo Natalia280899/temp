@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import styles from "./styles.module.css";
 
-const YourComponent = (inputData1, inputData2, outputData) => {
+const YourComponent = () => {
+  //inputData1, inputData2, outputData
   const [input1Value, setInput1Value] = useState("");
   const [input2Value, setInput2Value] = useState("");
 
@@ -9,18 +10,18 @@ const YourComponent = (inputData1, inputData2, outputData) => {
     // Load saved values from localStorage when the component mounts
     const savedInput1Value = localStorage.getItem("TEST:input1Value");
     const savedInput2Value = localStorage.getItem("TEST:input2Value");
-    console.log(inputData1, inputData2, outputData);
-    if (!inputData1) {
-      if (savedInput1Value) setInput1Value(savedInput1Value);
-    } else {
-      setInput1Value(inputData1);
-    }
 
-    if (!inputData1) {
-      if (savedInput2Value) setInput2Value(savedInput2Value);
-    } else {
-      setInput2Value(inputData2);
-    }
+    // if (!inputData1) {
+    //   if (savedInput1Value) setInput1Value(savedInput1Value);
+    // } else {
+    //   setInput1Value(inputData1);
+    // }
+
+    // if (!inputData1) {
+    //   if (savedInput2Value) setInput2Value(savedInput2Value);
+    // } else {
+    //   setInput2Value(inputData2);
+    // }
   }, []);
 
   const handleInputChange1 = (event) => {
@@ -52,10 +53,9 @@ const YourComponent = (inputData1, inputData2, outputData) => {
         className={styles.input}
       />
 
-      <button
-        className={styles.button}
-        onClick={() => outputData({ input1Value, input2Value })}
-      >
+      <button className={styles.button}>
+        {/* 
+        onClick={() => outputData({ input1Value, input2Value })} */}
         OUTPUT!
       </button>
     </div>
