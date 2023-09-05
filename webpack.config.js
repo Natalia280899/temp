@@ -1,7 +1,7 @@
-const path = require('path');
+const path = require("path");
 
 module.exports = {
-  entry: path.resolve('src', 'index.js'),
+  entry: path.resolve("src", "index.js"),
   module: {
     rules: [
       {
@@ -16,24 +16,29 @@ module.exports = {
       },
       {
         test: /\.css$/, // Match CSS files
-        use: ['style-loader', 'css-loader'], // Use style-loader and css-loader
+        use: ["style-loader", "css-loader"], // Use style-loader and css-loader
       },
     ],
+  },
+  resolve: {
+    alias: {
+      react: path.resolve("node_modules", "react"),
+    },
   },
   externals: [
     {
       react: {
-        root: 'React',
-        amd: 'react',
-        commonjs: 'react',
-        commonjs2: 'react',
+        root: "React",
+        amd: "react",
+        commonjs: "react",
+        commonjs2: "react",
       },
     },
   ],
   output: {
-    path: path.resolve('dist'),
-    filename: 'main.js',
-    libraryTarget: 'umd',
-    globalObject: 'this',
+    path: path.resolve("dist"),
+    filename: "main.js",
+    libraryTarget: "umd",
+    globalObject: "this",
   },
 };
